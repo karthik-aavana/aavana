@@ -1,0 +1,64 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{SERVER_PORT} !^443$
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+## EXPIRES CACHING ##
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresByType image/jpg "access 1 hour"
+ExpiresByType image/jpeg "access 1 hour"
+ExpiresByType image/gif "access 1 hour"
+ExpiresByType image/png "access 1 hour"
+ExpiresByType text/css "access 1 hour"
+ExpiresByType text/html "access 1 hour"
+ExpiresByType application/pdf "access 1 hour"
+ExpiresByType text/x-javascript "access 1 hour"
+ExpiresByType application/x-shockwave-flash "access 1 hour"
+ExpiresByType image/x-icon "access 1 hour"
+ExpiresDefault "access 1 hour"
+</IfModule>
+## EXPIRES CACHING ##
+ErrorDocument 404 /index.php
+
+RewriteEngine On
+RewriteRule https://aavana.in/gst-services https://aavana.in/gst-registration-services
+RewriteRule https://aavana.in/intellectual-property https://intellectual-property.aavana.in
+RewriteRule TDS-return-filing-advisory-service.php TDS-return-filing.php
+RewriteRule gst-services.php gst-registration-services.php
+RewriteRule TDS-return-filing-advisory-service.php TDS-return-filing.php
+
+
+RewriteEngine On
+RewriteRule https://aavana.in/limited-liability-partnership-registration https://aavana.in/limited-liability-partnership-llp-registration-india [R=301,L]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*)$ $1.php
+#RewriteRule ^([a-z]+)\/?$ $1.php [NC]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.*)$ $1.html
+
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /.*\.html\ HTTP/
+RewriteRule ^(.*)\.html$ /$1 [R=301,L]
+#RewriteRule ^([a-z]+)\/?$ $1.html [NC]
+
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /.*\.php\ HTTP/
+RewriteRule ^(.*)\.php$ /$1 [R=301,L]
+#RewriteRule ^([a-z]+)\/?$ $1.php [NC]
+
+RewriteRule ^index https://aavana.in [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+
+RewriteCond %{HTTPS} off
+RewriteRule ^images/.+$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+RewriteEngine On
+RewriteCond %{REQUEST_METHOD} !POST [OR]
+RewriteCond %{HTTP_REFERER} !^https://%{HTTP_HOST}
+RewriteRule ^subscribe\.php - [F]
