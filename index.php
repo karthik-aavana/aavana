@@ -85,7 +85,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="information-section">
+			<!-- <section class="information-section">
 				<div class="container">
 					<div class="row">
 						<div class="col-md-2 col-sm-2 col-xs-4 padding-0">
@@ -100,7 +100,7 @@
 						</div>
 					</div>
 				</div>
-			</section>
+			</section> -->
 			<section class="call-to-action-two">
 				<div class="action-wrapper">
 					<div class="container">
