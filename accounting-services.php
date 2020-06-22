@@ -108,7 +108,7 @@
 									Presently the entire nation is in the era of technology and Bangalore is referred to as the hub of technology. Aavana offers cloud-based accounting services to all types of businesses which can be accessed anywhere in the world. We use the latest software like QuickBooks, FreshBooks, NetSuite ERP, ZohoBooks and others too. This technology makes the entire <a href="https://aavana.in/blog/different-steps-of-process-of-accounting/" class="link">Accounting Process</a> quicker, reliable and effective.
 								</p>
 								<p>
-									Aavana, being one of the best service providers, has come up with a user-friendly <b>ERP</b> software called <b>AODRY</b> that can be used by any business entity.
+									Aavana, being one of the best service providers, has come up with a user-friendly <b>ERP</b> software called <b><a href="https://aodry.com/" class="link">AODRY</a></b> that can be used by any business entity.
 								</p>
 								<p>
 									Its customizable features will surely leave your most difficult and stressful task of accounting and billing easier than ever before.
