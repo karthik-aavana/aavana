@@ -150,6 +150,7 @@
 			<?php
 			include ('footer.php');
 			?>
+			<!-- footer -->
 	</body>
 </html>
 <script src="<?=BASE_URL;?>assets/js/chat_box_script.js"></script>
